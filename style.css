@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(15, 8, 13);
+    color: aqua;
+    height: 65px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    padding: 1px 14px;
+    font-family: cursive;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.gameContainer {
+    background-color: rgba(255, 255, 255, 0.918);
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 12vw);
+    grid-template-rows: repeat(3, 12vw);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+}
+
+.box {
+    border: 1.8px solid black;
+    font-size: 7vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(245, 180, 234);
+}
+
+.gameInfo {
+    padding: 1px 36px;
+    font-family: sans-serif;
+}
+
+.gameInfo h1 {
+    font-size: 2.5rem;
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 10px 25px;
+    padding: 4px 20px;
+    background: rgba(215, 236, 198, 0.699);
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.info {
+    font-size: 25px;
+}
+
+.line {
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    
+    background-color: #9c399c;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 900px) {
+    .gameContainer{ 
+        flex-wrap: wrap;
+    }
+    .gameInfo {
+        margin-top: 35px;
+    }
+    .gameInfo h1 {
+        font-size: 1.5rem;
+    }
+    .imgbox {
+        width: 150px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 18vw);
+        grid-template-rows: repeat((3, 18vw));
+    }
+}
